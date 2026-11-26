@@ -1,0 +1,84 @@
+{
+  "acceptance_passed": false,
+  "budget_seconds": 300,
+  "checks": {
+    "exact_kpi_values": false,
+    "fixture_preserved": true,
+    "valid_demo_structure": false,
+    "workspace_scope": true
+  },
+  "condition": "execution-first",
+  "elapsed_seconds": 299.189,
+  "outcome": "timeout",
+  "profile": "m4-ornith-01",
+  "schema_version": 1,
+  "success": false,
+  "task": "kpi-v1",
+  "task_spec_sha256": "bdc7544f832762460c31755c68559539ab3165b67ff2f7af2db78b6b4e7a6fdf",
+  "telemetry": {
+    "aborted_messages": 1,
+    "assistant_messages": 3,
+    "compactions": 0,
+    "elapsed_seconds": 299.189,
+    "finishes": {
+      "aborted": 1,
+      "tool-calls": 2
+    },
+    "generations": [
+      {
+        "finish": "tool-calls",
+        "reasoning_chars": 89,
+        "recorded_output_tokens": 49,
+        "recorded_reasoning_tokens": 18,
+        "seconds": 16.352
+      },
+      {
+        "finish": "tool-calls",
+        "reasoning_chars": 31,
+        "recorded_output_tokens": 46,
+        "recorded_reasoning_tokens": 10,
+        "seconds": 7.103
+      },
+      {
+        "finish": "aborted",
+        "reasoning_chars": 18598,
+        "recorded_output_tokens": 0,
+        "recorded_reasoning_tokens": 0,
+        "seconds": 275.703
+      }
+    ],
+    "identical_read_outputs": 0,
+    "messages": 4,
+    "reasoning_share_of_recorded_generation": 0.227642,
+    "recognized_completed_edit_calls": 0,
+    "recorded_tokens": {
+      "input": 15819,
+      "output": 95,
+      "reasoning": 28
+    },
+    "repeated_read_targets": 0,
+    "schema_version": 1,
+    "signals": [
+      "reasoning_text_without_recorded_token_count",
+      "aborted_generation",
+      "no_recognized_edit_and_zero_summary_files"
+    ],
+    "summary_files": 0,
+    "tool_calls": {
+      "bash": 1,
+      "read": 1
+    },
+    "tool_statuses": {
+      "completed": 2
+    },
+    "uncounted_reasoning_chars": 18598
+  },
+  "trial": 3,
+  "observations": {
+    "instruction_protocol": "docs/execution-first-v1.md",
+    "cutoff_deviation_seconds": -0.811,
+    "token_telemetry_complete": false,
+    "longest_reasoning_segment_seconds": 272.185,
+    "notes": "Manual interruption occurred 0.811 seconds before the nominal budget; retained as operator-classified timeout with deviation disclosed. Independent local checker failed; export confirms prescribed prompt and no completed edit. Recorded reasoning tokens exclude interrupted generation. No raw session content included."
+  }
+}
