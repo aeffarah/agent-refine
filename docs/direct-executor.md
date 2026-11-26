@@ -16,3 +16,12 @@ Tools are restricted to the benchmark's specific readable and writable basenames
 Reports contain aggregate token counts and fixed result labels, not tool arguments or responses. Completion tokens include reasoning if present; absent usage fields remain null. No OpenCode session export exists in this mode. The runner creates fresh workspaces and stores reports under gitignored private/direct. Choose another --trial on reruns.
 
 This changes the tool interface, context size, generation cap and orchestration together. Compare as an exploratory system-level intervention, not a controlled claim about reasoning suppression alone. Next steps: test the same tasks repeatedly, document failure modes, and evaluate unseen tasks before claiming general improvement.
+
+## Experimental policy v2: numbered lines
+
+The first live direct-staged KPI trial failed after 55.621s. It executed one read and one edit with zero recorded reasoning tokens; two exact-substring edits were rejected. Inspection of the synthetic output showed missing closing article tags, despite correct KPI labels/values. The new optional policy replaces the exact-substring interface with 1-based line edits (start_line, delete_count, content), exposes numbered file contents, and adds basic HTML structural diagnostics to retry feedback. The original policy remains the default. No acceptance criteria or fixture bytes have changed; no solution is provided. This tests a combined change to edit interface and feedback, not their individual contributions. Currently KPI-only.
+
+```sh
+python3 direct_executor.py kpi-v1 --profile m4-ornith-direct-nothink-01 \
+  --model ornith-1.5-9b-mlx --policy direct-lines
+```

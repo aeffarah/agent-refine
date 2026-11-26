@@ -37,7 +37,7 @@ HTML_AFTER = """<section id="pricing"><p>Starter: $19/mo</p></section>
 """
 KPIS = (("Revenue", "$84,205"), ("Projected growth", "+27.3%"),
         ("Active customers", "1,482"), ("Risk score", "Low"))
-CONDITIONS = ("baseline", "execution-first", "reasoning-off", "supervised", "recovery", "direct-staged")
+CONDITIONS = ("baseline", "execution-first", "reasoning-off", "supervised", "recovery", "direct-staged", "direct-lines")
 TASKS = {
     "write-v1": {
         "budget_seconds": 120,
