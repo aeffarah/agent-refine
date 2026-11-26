@@ -1,0 +1,85 @@
+{
+  "acceptance_passed": false,
+  "budget_seconds": 300,
+  "checks": {
+    "exact_kpi_values": false,
+    "fixture_preserved": true,
+    "valid_demo_structure": false,
+    "workspace_scope": true
+  },
+  "condition": "direct-lines",
+  "direct_executor": {
+    "backend_cancellation_verified": false,
+    "max_edit_attempts": 3,
+    "max_output_tokens_per_request": 1024,
+    "max_read_attempts": 2,
+    "mode": "direct-lines",
+    "policy_version": 2,
+    "recorded_tokens": {
+      "completion_including_reasoning": 3116,
+      "input": 2473,
+      "reasoning": 2800
+    },
+    "stop_reason": "edit_attempts_exhausted",
+    "successful_tool_calls": {
+      "read_file": 1
+    },
+    "turns": [
+      {
+        "requested_tool": "read_file",
+        "result": "executed",
+        "usage": {
+          "completion_including_reasoning": 44,
+          "input": 306,
+          "reasoning": 7
+        }
+      },
+      {
+        "requested_tool": "edit_lines",
+        "result": "no_tool_call",
+        "usage": {
+          "completion_including_reasoning": 1024,
+          "input": 715,
+          "reasoning": 1010
+        }
+      },
+      {
+        "requested_tool": "edit_lines",
+        "result": "no_tool_call",
+        "usage": {
+          "completion_including_reasoning": 1024,
+          "input": 726,
+          "reasoning": 833
+        }
+      },
+      {
+        "requested_tool": "edit_lines",
+        "result": "no_tool_call",
+        "usage": {
+          "completion_including_reasoning": 1024,
+          "input": 726,
+          "reasoning": 950
+        }
+      }
+    ]
+  },
+  "elapsed_seconds": 188.772,
+  "outcome": "aborted",
+  "profile": "m4-inkling-q2-direct-01",
+  "schema_version": 1,
+  "success": false,
+  "task": "kpi-v1",
+  "task_spec_sha256": "bdc7544f832762460c31755c68559539ab3165b67ff2f7af2db78b6b4e7a6fdf",
+  "telemetry": null,
+  "trial": 1,
+  "observations": {
+    "quantization": "Q2_K_XL",
+    "format": "gguf",
+    "model_weights_bytes": 10411765120,
+    "context_length": 8192,
+    "parallel_predictions": "Operator indicated configuration looked good after parallel=1 instruction; actual value not independently verified.",
+    "reasoning_effort": "unverified",
+    "hardware_usability": "Operator reported memory pressure did not drop after completion. Post-run pressure color, swap and unloading behavior not measured.",
+    "notes": "Original prompt template requested; reasoning observed. All three edit attempts exhausted 1024 completion-token cap."
+  }
+}
