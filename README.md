@@ -49,6 +49,8 @@ See the [aggregate baseline](benchmarks/001-ornith-baseline.json) and [evaluatio
 
 See the [governor guide](docs/reasoning-governor.md) and [experimental bounded recovery](docs/bounded-recovery.md).
 
+See the [direct staged executor](docs/direct-executor.md) for an experimental local tool loop without OpenCode. It is not yet validated against the live model.
+
 ## Diagnostics
 
 - Recorded token counts and per-response durations.
