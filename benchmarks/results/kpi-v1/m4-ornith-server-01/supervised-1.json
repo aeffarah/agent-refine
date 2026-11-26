@@ -1,0 +1,91 @@
+{
+  "acceptance_passed": false,
+  "budget_seconds": 300,
+  "checks": {
+    "exact_kpi_values": false,
+    "fixture_preserved": true,
+    "valid_demo_structure": false,
+    "workspace_scope": true
+  },
+  "condition": "supervised",
+  "elapsed_seconds": 61.567,
+  "governor": {
+    "abort_acknowledged": true,
+    "elapsed_seconds": 61.567,
+    "final_status": "not-listed",
+    "inference_cancellation_verified": false,
+    "mode": "opencode-server",
+    "policy_version": 1,
+    "reasoning_char_limit": 3000,
+    "recovery_attempts": 0,
+    "stop_reason": "reasoning_limit",
+    "streamed_characters": {
+      "reasoning": 3003,
+      "text": 4
+    }
+  },
+  "outcome": "aborted",
+  "profile": "m4-ornith-server-01",
+  "schema_version": 1,
+  "success": false,
+  "task": "kpi-v1",
+  "task_spec_sha256": "bdc7544f832762460c31755c68559539ab3165b67ff2f7af2db78b6b4e7a6fdf",
+  "telemetry": {
+    "aborted_messages": 1,
+    "assistant_messages": 3,
+    "compactions": 0,
+    "elapsed_seconds": 61.564,
+    "finishes": {
+      "aborted": 1,
+      "tool-calls": 2
+    },
+    "generations": [
+      {
+        "finish": "tool-calls",
+        "reasoning_chars": 129,
+        "recorded_output_tokens": 60,
+        "recorded_reasoning_tokens": 27,
+        "seconds": 13.619
+      },
+      {
+        "finish": "tool-calls",
+        "reasoning_chars": 40,
+        "recorded_output_tokens": 57,
+        "recorded_reasoning_tokens": 11,
+        "seconds": 4.375
+      },
+      {
+        "finish": "aborted",
+        "reasoning_chars": 2834,
+        "recorded_output_tokens": 0,
+        "recorded_reasoning_tokens": 0,
+        "seconds": 43.441
+      }
+    ],
+    "identical_read_outputs": 0,
+    "messages": 4,
+    "reasoning_share_of_recorded_generation": 0.245161,
+    "recognized_completed_edit_calls": 0,
+    "recorded_tokens": {
+      "input": 15726,
+      "output": 117,
+      "reasoning": 38
+    },
+    "repeated_read_targets": 0,
+    "schema_version": 1,
+    "signals": [
+      "reasoning_text_without_recorded_token_count",
+      "aborted_generation"
+    ],
+    "summary_files": null,
+    "tool_calls": {
+      "bash": 1,
+      "read": 1
+    },
+    "tool_statuses": {
+      "completed": 2
+    },
+    "uncounted_reasoning_chars": 2834
+  },
+  "trial": 1
+}

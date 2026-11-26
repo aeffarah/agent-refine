@@ -1,0 +1,101 @@
+{
+  "acceptance_passed": true,
+  "budget_seconds": 120,
+  "checks": {
+    "exact_output": true,
+    "fixture_preserved": true,
+    "workspace_scope": true
+  },
+  "condition": "baseline",
+  "elapsed_seconds": 52.662,
+  "governor": {
+    "abort_acknowledged": null,
+    "elapsed_seconds": 52.662,
+    "final_status": "not-listed",
+    "inference_cancellation_verified": false,
+    "mode": "opencode-server",
+    "policy_version": 1,
+    "reasoning_char_limit": null,
+    "recovery_attempts": 0,
+    "stop_reason": "completed",
+    "streamed_characters": {
+      "reasoning": 1403,
+      "text": 385
+    }
+  },
+  "outcome": "completed",
+  "profile": "m4-ornith-server-01",
+  "schema_version": 1,
+  "success": true,
+  "task": "write-v1",
+  "task_spec_sha256": "5bac442d000f12827d42455dd30bce724989f0f929756f42a6ef050736d18783",
+  "telemetry": {
+    "aborted_messages": 0,
+    "assistant_messages": 5,
+    "compactions": 0,
+    "elapsed_seconds": 52.654,
+    "finishes": {
+      "stop": 1,
+      "tool-calls": 4
+    },
+    "generations": [
+      {
+        "finish": "tool-calls",
+        "reasoning_chars": 284,
+        "recorded_output_tokens": 71,
+        "recorded_reasoning_tokens": 80,
+        "seconds": 16.625
+      },
+      {
+        "finish": "tool-calls",
+        "reasoning_chars": 131,
+        "recorded_output_tokens": 61,
+        "recorded_reasoning_tokens": 28,
+        "seconds": 4.978
+      },
+      {
+        "finish": "tool-calls",
+        "reasoning_chars": 349,
+        "recorded_output_tokens": 87,
+        "recorded_reasoning_tokens": 88,
+        "seconds": 10.052
+      },
+      {
+        "finish": "tool-calls",
+        "reasoning_chars": 243,
+        "recorded_output_tokens": 99,
+        "recorded_reasoning_tokens": 52,
+        "seconds": 8.774
+      },
+      {
+        "finish": "stop",
+        "reasoning_chars": 396,
+        "recorded_output_tokens": 69,
+        "recorded_reasoning_tokens": 142,
+        "seconds": 12.085
+      }
+    ],
+    "identical_read_outputs": 0,
+    "messages": 6,
+    "reasoning_share_of_recorded_generation": 0.501931,
+    "recognized_completed_edit_calls": 1,
+    "recorded_tokens": {
+      "input": 39944,
+      "output": 387,
+      "reasoning": 390
+    },
+    "repeated_read_targets": 0,
+    "schema_version": 1,
+    "signals": [],
+    "summary_files": null,
+    "tool_calls": {
+      "bash": 3,
+      "write": 1
+    },
+    "tool_statuses": {
+      "completed": 4
+    },
+    "uncounted_reasoning_chars": 0
+  },
+  "trial": 1
+}
