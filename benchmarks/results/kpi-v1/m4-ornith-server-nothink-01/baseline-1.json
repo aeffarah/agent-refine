@@ -1,0 +1,72 @@
+{
+  "acceptance_passed": false,
+  "budget_seconds": 300,
+  "checks": {
+    "exact_kpi_values": false,
+    "fixture_preserved": true,
+    "valid_demo_structure": false,
+    "workspace_scope": true
+  },
+  "condition": "baseline",
+  "elapsed_seconds": 47.091,
+  "governor": {
+    "abort_acknowledged": null,
+    "elapsed_seconds": 47.091,
+    "final_status": "not-listed",
+    "inference_cancellation_verified": false,
+    "mode": "opencode-server",
+    "policy_version": 1,
+    "reasoning_char_limit": null,
+    "recovery_attempts": 0,
+    "stop_reason": "completed",
+    "streamed_characters": {
+      "text": 451
+    }
+  },
+  "outcome": "completed",
+  "profile": "m4-ornith-server-nothink-01",
+  "schema_version": 1,
+  "success": false,
+  "task": "kpi-v1",
+  "task_spec_sha256": "bdc7544f832762460c31755c68559539ab3165b67ff2f7af2db78b6b4e7a6fdf",
+  "telemetry": {
+    "aborted_messages": 0,
+    "assistant_messages": 1,
+    "compactions": 0,
+    "elapsed_seconds": 47.08,
+    "finishes": {
+      "stop": 1
+    },
+    "generations": [
+      {
+        "finish": "stop",
+        "reasoning_chars": 0,
+        "recorded_output_tokens": 117,
+        "recorded_reasoning_tokens": 0,
+        "seconds": 46.957
+      }
+    ],
+    "identical_read_outputs": 0,
+    "messages": 2,
+    "reasoning_share_of_recorded_generation": 0,
+    "recognized_completed_edit_calls": 0,
+    "recorded_tokens": {
+      "input": 7766,
+      "output": 117,
+      "reasoning": 0
+    },
+    "repeated_read_targets": 0,
+    "schema_version": 1,
+    "signals": [],
+    "summary_files": null,
+    "tool_calls": {},
+    "tool_statuses": {},
+    "uncounted_reasoning_chars": 0
+  },
+  "trial": 1,
+  "observations": {
+    "template_override": "enable_thinking=false at start of model Jinja template (operator-reported)",
+    "native_reasoning_parameter": "rejected as unsupported",
+    "notes": "Separate runtime profile; native chat smoke test returned zero recorded reasoning tokens. KPI run completed with zero observed reasoning and no tool calls; independent acceptance failed. Raw output not yet inspected."
+  }
+}
