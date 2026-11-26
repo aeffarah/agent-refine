@@ -1,0 +1,80 @@
+{
+  "acceptance_passed": false,
+  "budget_seconds": 300,
+  "checks": {
+    "exact_kpi_values": false,
+    "fixture_preserved": true,
+    "valid_demo_structure": false,
+    "workspace_scope": true
+  },
+  "condition": "baseline",
+  "elapsed_seconds": 262,
+  "outcome": "completed",
+  "profile": "m4-ornith-01",
+  "schema_version": 1,
+  "success": false,
+  "task": "kpi-v1",
+  "task_spec_sha256": "bdc7544f832762460c31755c68559539ab3165b67ff2f7af2db78b6b4e7a6fdf",
+  "telemetry": {
+    "aborted_messages": 0,
+    "assistant_messages": 4,
+    "compactions": 0,
+    "elapsed_seconds": 262.765,
+    "finishes": {
+      "stop": 1,
+      "tool-calls": 3
+    },
+    "generations": [
+      {
+        "finish": "tool-calls",
+        "reasoning_chars": 64,
+        "recorded_output_tokens": 46,
+        "recorded_reasoning_tokens": 14,
+        "seconds": 14.954
+      },
+      {
+        "finish": "tool-calls",
+        "reasoning_chars": 12380,
+        "recorded_output_tokens": 335,
+        "recorded_reasoning_tokens": 3597,
+        "seconds": 216.908
+      },
+      {
+        "finish": "tool-calls",
+        "reasoning_chars": 30,
+        "recorded_output_tokens": 46,
+        "recorded_reasoning_tokens": 8,
+        "seconds": 3.635
+      },
+      {
+        "finish": "stop",
+        "reasoning_chars": 958,
+        "recorded_output_tokens": 111,
+        "recorded_reasoning_tokens": 269,
+        "seconds": 27.233
+      }
+    ],
+    "identical_read_outputs": 0,
+    "messages": 5,
+    "reasoning_share_of_recorded_generation": 0.878446,
+    "recognized_completed_edit_calls": 1,
+    "recorded_tokens": {
+      "input": 40580,
+      "output": 538,
+      "reasoning": 3888
+    },
+    "repeated_read_targets": 0,
+    "schema_version": 1,
+    "signals": [],
+    "summary_files": 0,
+    "tool_calls": {
+      "edit": 1,
+      "read": 2
+    },
+    "tool_statuses": {
+      "completed": 3
+    },
+    "uncounted_reasoning_chars": 0
+  },
+  "trial": 1
+}

@@ -1,0 +1,90 @@
+{
+  "acceptance_passed": true,
+  "budget_seconds": 300,
+  "checks": {
+    "exact_kpi_values": true,
+    "fixture_preserved": true,
+    "valid_demo_structure": true,
+    "workspace_scope": true
+  },
+  "condition": "baseline",
+  "elapsed_seconds": 356.663,
+  "outcome": "timeout",
+  "profile": "m4-ornith-01",
+  "schema_version": 1,
+  "success": false,
+  "task": "kpi-v1",
+  "task_spec_sha256": "bdc7544f832762460c31755c68559539ab3165b67ff2f7af2db78b6b4e7a6fdf",
+  "telemetry": {
+    "aborted_messages": 1,
+    "assistant_messages": 4,
+    "compactions": 0,
+    "elapsed_seconds": 356.663,
+    "finishes": {
+      "aborted": 1,
+      "tool-calls": 3
+    },
+    "generations": [
+      {
+        "finish": "tool-calls",
+        "reasoning_chars": 64,
+        "recorded_output_tokens": 46,
+        "recorded_reasoning_tokens": 14,
+        "seconds": 14.814
+      },
+      {
+        "finish": "tool-calls",
+        "reasoning_chars": 18037,
+        "recorded_output_tokens": 328,
+        "recorded_reasoning_tokens": 4977,
+        "seconds": 291.337
+      },
+      {
+        "finish": "tool-calls",
+        "reasoning_chars": 69,
+        "recorded_output_tokens": 46,
+        "recorded_reasoning_tokens": 14,
+        "seconds": 4.187
+      },
+      {
+        "finish": "aborted",
+        "reasoning_chars": 2393,
+        "recorded_output_tokens": 0,
+        "recorded_reasoning_tokens": 0,
+        "seconds": 46.289
+      }
+    ],
+    "identical_read_outputs": 0,
+    "messages": 5,
+    "reasoning_share_of_recorded_generation": 0.922581,
+    "recognized_completed_edit_calls": 1,
+    "recorded_tokens": {
+      "input": 29329,
+      "output": 420,
+      "reasoning": 5005
+    },
+    "repeated_read_targets": 0,
+    "schema_version": 1,
+    "signals": [
+      "reasoning_text_without_recorded_token_count",
+      "aborted_generation"
+    ],
+    "summary_files": 0,
+    "tool_calls": {
+      "bash": 1,
+      "edit": 1,
+      "read": 2
+    },
+    "tool_statuses": {
+      "completed": 3,
+      "error": 1
+    },
+    "uncounted_reasoning_chars": 2393
+  },
+  "trial": 3,
+  "observations": {
+    "first_completed_edit_seconds": 306.12,
+    "cutoff_overrun_seconds": 56.663,
+    "notes": "Manual cutoff was late. All acceptance checks passed at termination, but the first completed edit occurred after the fixed 300-second budget. Final generation was aborted and its tokens were not recorded. Elapsed time is the exported session span. Treat the observed runtime as time to interruption, not time to successful completion."
+  }
+}

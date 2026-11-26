@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "task": "write-v1",
+  "task_spec_sha256": "5bac442d000f12827d42455dd30bce724989f0f929756f42a6ef050736d18783",
+  "profile": "m4-ornith-01",
+  "condition": "baseline",
+  "trial": 1,
+  "budget_seconds": 120,
+  "elapsed_seconds": 52.8,
+  "outcome": "completed",
+  "checks": {
+    "workspace_scope": true,
+    "fixture_preserved": true,
+    "exact_output": true
+  },
+  "acceptance_passed": true,
+  "success": true,
+  "telemetry": {
+    "schema_version": 1,
+    "messages": 6,
+    "assistant_messages": 5,
+    "elapsed_seconds": 52.848,
+    "recorded_tokens": {
+      "input": 39797,
+      "output": 359,
+      "reasoning": 269
+    },
+    "reasoning_share_of_recorded_generation": 0.428344,
+    "finishes": {
+      "tool-calls": 4,
+      "stop": 1
+    },
+    "tool_calls": {
+      "bash": 4
+    },
+    "tool_statuses": {
+      "completed": 4
+    },
+    "recognized_completed_edit_calls": 0,
+    "summary_files": 0,
+    "repeated_read_targets": 0,
+    "identical_read_outputs": 0,
+    "compactions": 0,
+    "aborted_messages": 0,
+    "uncounted_reasoning_chars": 0,
+    "generations": [
+      {
+        "seconds": 16.148,
+        "finish": "tool-calls",
+        "recorded_reasoning_tokens": 29,
+        "recorded_output_tokens": 48,
+        "reasoning_chars": 143
+      },
+      {
+        "seconds": 7.033,
+        "finish": "tool-calls",
+        "recorded_reasoning_tokens": 34,
+        "recorded_output_tokens": 55,
+        "reasoning_chars": 147
+      },
+      {
+        "seconds": 6.417,
+        "finish": "tool-calls",
+        "recorded_reasoning_tokens": 18,
+        "recorded_output_tokens": 79,
+        "reasoning_chars": 81
+      },
+      {
+        "seconds": 10.09,
+        "finish": "tool-calls",
+        "recorded_reasoning_tokens": 53,
+        "recorded_output_tokens": 108,
+        "reasoning_chars": 197
+      },
+      {
+        "seconds": 13.122,
+        "finish": "stop",
+        "recorded_reasoning_tokens": 135,
+        "recorded_output_tokens": 69,
+        "reasoning_chars": 370
+      }
+    ],
+    "signals": [
+      "no_recognized_edit_and_zero_summary_files"
+    ]
+  },
+  "observations": {
+    "first_successful_file_write_seconds": 23.147,
+    "shell_nonzero_exit_count": 1,
+    "notes": "Acceptance checks and 52.8-second duration were reported by the operator's local benchmark checker and OpenCode UI. Aggregate telemetry was reconstructed from the private export. The zero recognized edit count is a limitation of the analyzer: the successful write used a shell command. One unsupported macOS cat option was followed by successful verification using other utilities. Runtime controls were not independently verified."
+  }
+}
