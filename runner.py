@@ -122,12 +122,16 @@ def export_session(sid, workspace, env, logdir):
         return None, "export_failed"
 
 
+class TrialExistsError(ValueError):
+    pass
+
+
 def run_trial(args, trial):
     name = f"{args.task}-{args.profile}-{args.condition}-{trial}"
     workspace = args.workspace_root / name
     logdir = REPO / "private" / "runner" / name
     if workspace.exists() or logdir.exists():
-        raise ValueError("Trial already exists; choose another trial number")
+        raise TrialExistsError("Trial already exists; choose another --start-trial number.")
     logdir.mkdir(mode=0o700, parents=True, exist_ok=False)
     prompt = prepare(args.task, workspace)
     if args.condition == "execution-first":
@@ -199,6 +203,9 @@ def main():
                 print("Batch stopped after timeout/abort. Verify inference is idle before resuming.")
                 break
         print(json.dumps(compare(reports), indent=2))
+    except TrialExistsError as exc:
+        print(str(exc), file=sys.stderr)
+        return 1
     except (OSError, ValueError, KeyboardInterrupt) as exc:
         print(f"Runner stopped ({type(exc).__name__}); inspect private logs.", file=sys.stderr)
         return 1

@@ -4,7 +4,7 @@ Local-first diagnostics and benchmarks for AI coding agents. The goal is to impr
 
 ## Status
 
-Early prototype (v0.2). Supports OpenCode JSON session analysis and controlled file-writing and HTML-editing benchmarks with independent static acceptance checks. It does not modify model weights or supervise live agents.
+Early prototype (v0.3). Supports OpenCode JSON session analysis, controlled file-writing and HTML-editing benchmarks, independent static acceptance checks and experimental headless execution. It does not modify model weights or supervise live reasoning.
 
 ## Quick start
 
@@ -21,7 +21,9 @@ To retain a report, redirect stdout to a file. The report uses aggregate counts,
 
 ## Controlled benchmarks
 
-Run `python3 benchmark.py list` to see the two frozen tasks. The benchmark runner prepares fresh synthetic fixtures, checks the final files independently, and compares reviewed aggregate results. See the [local benchmark guide](docs/controlled-benchmarks.md). No controlled model results have been collected yet.
+Run `python3 benchmark.py list` to see the two frozen tasks. The benchmark runner prepares fresh synthetic fixtures, checks the final files independently, and compares reviewed aggregate results. See the [local benchmark guide](docs/controlled-benchmarks.md). Controlled aggregate results are available under `benchmarks/results/`. In three interactive KPI baseline trials, one passed within budget; three execution-first prompt trials all timed out without an edit. These small sequential samples are exploratory. Headless trials use a separate profile.
+
+See the [automated runner guide](docs/automated-runner.md) for single-command execution. The first local headless write trial passed in 18.952 seconds; cancellation and containment remain unverified.
 
 ## First case study: Ornith 1.5 9B MLX
 
