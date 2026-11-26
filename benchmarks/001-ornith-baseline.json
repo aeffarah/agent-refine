@@ -1,0 +1,90 @@
+{
+  "aborted_messages": 1,
+  "assistant_messages": 7,
+  "compactions": 1,
+  "elapsed_seconds": 3595.036,
+  "finishes": {
+    "aborted": 1,
+    "length": 2,
+    "stop": 1,
+    "tool-calls": 3
+  },
+  "generations": [
+    {
+      "finish": "tool-calls",
+      "reasoning_chars": 127,
+      "recorded_output_tokens": 60,
+      "recorded_reasoning_tokens": 24,
+      "seconds": 8.741
+    },
+    {
+      "finish": "length",
+      "reasoning_chars": 59425,
+      "recorded_output_tokens": 0,
+      "recorded_reasoning_tokens": 16384,
+      "seconds": 1027.113
+    },
+    {
+      "finish": "tool-calls",
+      "reasoning_chars": 112,
+      "recorded_output_tokens": 40,
+      "recorded_reasoning_tokens": 22,
+      "seconds": 68.402
+    },
+    {
+      "finish": "length",
+      "reasoning_chars": 53976,
+      "recorded_output_tokens": 0,
+      "recorded_reasoning_tokens": 16384,
+      "seconds": 1339.286
+    },
+    {
+      "finish": "stop",
+      "reasoning_chars": 4716,
+      "recorded_output_tokens": 968,
+      "recorded_reasoning_tokens": 1182,
+      "seconds": 443.161
+    },
+    {
+      "finish": "tool-calls",
+      "reasoning_chars": 246,
+      "recorded_output_tokens": 78,
+      "recorded_reasoning_tokens": 52,
+      "seconds": 33.325
+    },
+    {
+      "finish": "aborted",
+      "reasoning_chars": 21076,
+      "recorded_output_tokens": 0,
+      "recorded_reasoning_tokens": 0,
+      "seconds": 413.472
+    }
+  ],
+  "identical_read_outputs": 1,
+  "messages": 11,
+  "reasoning_share_of_recorded_generation": 0.967438,
+  "recognized_completed_edit_calls": 0,
+  "recorded_tokens": {
+    "input": 127168,
+    "output": 1146,
+    "reasoning": 34048
+  },
+  "repeated_read_targets": 2,
+  "schema_version": 1,
+  "signals": [
+    "generation_limit_reached",
+    "repeated_read_target_without_recognized_edit",
+    "identical_read_output_without_recognized_edit",
+    "reasoning_text_without_recorded_token_count",
+    "aborted_generation",
+    "no_recognized_edit_and_zero_summary_files"
+  ],
+  "summary_files": 0,
+  "tool_calls": {
+    "read": 3
+  },
+  "tool_statuses": {
+    "completed": 3
+  },
+  "uncounted_reasoning_chars": 21076
+}
