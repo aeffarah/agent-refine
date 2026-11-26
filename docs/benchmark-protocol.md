@@ -9,8 +9,8 @@ Improve verified task completion and time-to-completion while retaining useful r
 - Freeze an initial task fixture, acceptance tests and allowed tools.
 - Start each run from a fresh project copy and session. Record hardware, model identifier, quantization, inference runtime, OpenCode version, model settings, prompt, and wall-clock budget. Record whether settings are verified or merely declared.
 - Change one factor at a time (baseline, instructions, supported reasoning control, or supervisor). Keep inference/runtime settings fixed otherwise. Run at least three trials per condition initially; report each trial, success rate, and median elapsed time. Avoid claiming statistical significance from small samples.
-- Verify output with independent acceptance tests, not agent self-report. Include a minimal file-writing task, a scoped HTML component edit, and a multi-component interactive dashboard task. Fixtures and acceptance tests for these tasks are future work.
-- Record timeouts and aborted attempts as failures unless independent tests establish completion. Record wall time including overhead, and generation time separately when available. Report missing token counts rather than treating interrupted generation as zero work.
+- Verify output with independent acceptance tests, not agent self-report. Include a minimal file-writing task, a scoped HTML component edit, and a multi-component interactive dashboard task. The first two fixtures and static acceptance checks are implemented in the [controlled benchmark guide](controlled-benchmarks.md). Interactive dashboard checks are future work.
+- For the v0.2 controlled tasks, record timeouts and aborted attempts as failures even if the final files pass acceptance. Report acceptance independently. Record wall time including overhead, and generation time separately when available. Report missing token counts rather than treating interrupted generation as zero work.
 - Include total token consumption, tool calls, repeats, edit calls, tests passed, changed files, and hardware memory pressure where measured. Protect raw logs; publish only reviewed aggregates and synthetic fixtures.
 
 ## Initial observation
