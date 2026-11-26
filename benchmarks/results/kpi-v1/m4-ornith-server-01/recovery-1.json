@@ -1,0 +1,114 @@
+{
+  "acceptance_passed": false,
+  "budget_seconds": 300,
+  "checks": {
+    "exact_kpi_values": false,
+    "fixture_preserved": true,
+    "valid_demo_structure": false,
+    "workspace_scope": true
+  },
+  "condition": "recovery",
+  "elapsed_seconds": 105.307,
+  "governor": {
+    "abort_acknowledged": true,
+    "elapsed_seconds": 105.307,
+    "final_status": "not-listed",
+    "inference_cancellation_verified": false,
+    "mode": "opencode-server",
+    "phases": [
+      {
+        "abort_acknowledged": true,
+        "elapsed_seconds": 59.153,
+        "final_status": "not-listed",
+        "inference_cancellation_verified": false,
+        "stop_reason": "reasoning_limit",
+        "streamed_characters": {
+          "reasoning": 3001,
+          "text": 2
+        }
+      },
+      {
+        "abort_acknowledged": true,
+        "elapsed_seconds": 44.137,
+        "final_status": "not-listed",
+        "inference_cancellation_verified": false,
+        "stop_reason": "reasoning_limit",
+        "streamed_characters": {
+          "reasoning": 3002
+        }
+      }
+    ],
+    "policy_version": 2,
+    "reasoning_char_limit": 3000,
+    "recovery_attempts": 1,
+    "recovery_decision": "attempted",
+    "stop_reason": "reasoning_limit",
+    "streamed_characters": {
+      "reasoning": 6003,
+      "text": 2
+    }
+  },
+  "outcome": "aborted",
+  "profile": "m4-ornith-server-01",
+  "schema_version": 1,
+  "success": false,
+  "task": "kpi-v1",
+  "task_spec_sha256": "bdc7544f832762460c31755c68559539ab3165b67ff2f7af2db78b6b4e7a6fdf",
+  "telemetry": {
+    "aborted_messages": 2,
+    "assistant_messages": 3,
+    "compactions": 0,
+    "elapsed_seconds": 105.303,
+    "finishes": {
+      "aborted": 2,
+      "tool-calls": 1
+    },
+    "generations": [
+      {
+        "finish": "tool-calls",
+        "reasoning_chars": 64,
+        "recorded_output_tokens": 57,
+        "recorded_reasoning_tokens": 14,
+        "seconds": 13.886
+      },
+      {
+        "finish": "aborted",
+        "reasoning_chars": 2940,
+        "recorded_output_tokens": 0,
+        "recorded_reasoning_tokens": 0,
+        "seconds": 45.127
+      },
+      {
+        "finish": "aborted",
+        "reasoning_chars": 3002,
+        "recorded_output_tokens": 0,
+        "recorded_reasoning_tokens": 0,
+        "seconds": 44.12
+      }
+    ],
+    "identical_read_outputs": 0,
+    "messages": 5,
+    "reasoning_share_of_recorded_generation": 0.197183,
+    "recognized_completed_edit_calls": 0,
+    "recorded_tokens": {
+      "input": 7762,
+      "output": 57,
+      "reasoning": 14
+    },
+    "repeated_read_targets": 0,
+    "schema_version": 1,
+    "signals": [
+      "reasoning_text_without_recorded_token_count",
+      "aborted_generation"
+    ],
+    "summary_files": null,
+    "tool_calls": {
+      "read": 1
+    },
+    "tool_statuses": {
+      "completed": 1
+    },
+    "uncounted_reasoning_chars": 5942
+  },
+  "trial": 1
+}
