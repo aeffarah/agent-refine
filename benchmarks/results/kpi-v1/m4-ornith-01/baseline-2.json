@@ -1,0 +1,159 @@
+{
+  "acceptance_passed": true,
+  "budget_seconds": 300,
+  "checks": {
+    "exact_kpi_values": true,
+    "fixture_preserved": true,
+    "valid_demo_structure": true,
+    "workspace_scope": true
+  },
+  "condition": "baseline",
+  "elapsed_seconds": 177,
+  "outcome": "completed",
+  "profile": "m4-ornith-01",
+  "schema_version": 1,
+  "success": true,
+  "task": "kpi-v1",
+  "task_spec_sha256": "bdc7544f832762460c31755c68559539ab3165b67ff2f7af2db78b6b4e7a6fdf",
+  "telemetry": {
+    "aborted_messages": 0,
+    "assistant_messages": 4,
+    "compactions": 0,
+    "elapsed_seconds": 177.526,
+    "finishes": {
+      "stop": 1,
+      "tool-calls": 3
+    },
+    "generations": [
+      {
+        "finish": "tool-calls",
+        "reasoning_chars": 119,
+        "recorded_output_tokens": 46,
+        "recorded_reasoning_tokens": 22,
+        "seconds": 17.089
+      },
+      {
+        "finish": "tool-calls",
+        "reasoning_chars": 6887,
+        "recorded_output_tokens": 333,
+        "recorded_reasoning_tokens": 1945,
+        "seconds": 131.228
+      },
+      {
+        "finish": "tool-calls",
+        "reasoning_chars": 30,
+        "recorded_output_tokens": 46,
+        "recorded_reasoning_tokens": 8,
+        "seconds": 3.292
+      },
+      {
+        "finish": "stop",
+        "reasoning_chars": 1059,
+        "recorded_output_tokens": 112,
+        "recorded_reasoning_tokens": 300,
+        "seconds": 25.883
+      }
+    ],
+    "identical_read_outputs": 0,
+    "messages": 5,
+    "reasoning_share_of_recorded_generation": 0.809033,
+    "recognized_completed_edit_calls": 1,
+    "recorded_tokens": {
+      "input": 37300,
+      "output": 537,
+      "reasoning": 2275
+    },
+    "repeated_read_targets": 0,
+    "schema_version": 1,
+    "signals": [],
+    "summary_files": 0,
+    "tool_calls": {
+      "edit": 1,
+      "read": 2
+    },
+    "tool_statuses": {
+      "completed": 3
+    },
+    "uncounted_reasoning_chars": 0
+  },
+  "trial": 2,
+  "session_telemetry": {
+    "aborted_messages": 1,
+    "assistant_messages": 5,
+    "compactions": 0,
+    "elapsed_seconds": 283.81,
+    "finishes": {
+      "aborted": 1,
+      "stop": 1,
+      "tool-calls": 3
+    },
+    "generations": [
+      {
+        "finish": "tool-calls",
+        "reasoning_chars": 119,
+        "recorded_output_tokens": 46,
+        "recorded_reasoning_tokens": 22,
+        "seconds": 17.089
+      },
+      {
+        "finish": "tool-calls",
+        "reasoning_chars": 6887,
+        "recorded_output_tokens": 333,
+        "recorded_reasoning_tokens": 1945,
+        "seconds": 131.228
+      },
+      {
+        "finish": "tool-calls",
+        "reasoning_chars": 30,
+        "recorded_output_tokens": 46,
+        "recorded_reasoning_tokens": 8,
+        "seconds": 3.292
+      },
+      {
+        "finish": "stop",
+        "reasoning_chars": 1059,
+        "recorded_output_tokens": 112,
+        "recorded_reasoning_tokens": 300,
+        "seconds": 25.883
+      },
+      {
+        "finish": "aborted",
+        "reasoning_chars": 487,
+        "recorded_output_tokens": 0,
+        "recorded_reasoning_tokens": 0,
+        "seconds": 9.866
+      }
+    ],
+    "identical_read_outputs": 0,
+    "messages": 7,
+    "reasoning_share_of_recorded_generation": 0.809033,
+    "recognized_completed_edit_calls": 1,
+    "recorded_tokens": {
+      "input": 37300,
+      "output": 537,
+      "reasoning": 2275
+    },
+    "repeated_read_targets": 0,
+    "schema_version": 1,
+    "signals": [
+      "reasoning_text_without_recorded_token_count",
+      "aborted_generation"
+    ],
+    "summary_files": 0,
+    "tool_calls": {
+      "bash": 1,
+      "edit": 1,
+      "read": 2
+    },
+    "tool_statuses": {
+      "completed": 3,
+      "error": 1
+    },
+    "uncounted_reasoning_chars": 487
+  },
+  "observations": {
+    "telemetry_scope": "First user request through its completed assistant response. Full-session aggregate retained separately because a subsequent accidental shell-command prompt and aborted response occurred after the original task completed.",
+    "elapsed_seconds_source": "Operator-reported OpenCode task duration; task-scoped export span 177.526 seconds.",
+    "acceptance_source": "Operator-provided independent local benchmark checker output. Post-task tool was aborted before execution according to the export; acceptance verified after that turn."
+  }
+}
