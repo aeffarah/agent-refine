@@ -4,7 +4,7 @@ Local-first diagnostics and benchmarks for AI coding agents. The goal is to impr
 
 ## Status
 
-Early prototype (v0.1). Supports OpenCode JSON session exports. It analyzes completed sessions; it does not modify model weights, supervise live agents, or prove task success.
+Early prototype (v0.2). Supports OpenCode JSON session analysis and controlled file-writing and HTML-editing benchmarks with independent static acceptance checks. It does not modify model weights or supervise live agents.
 
 ## Quick start
 
@@ -18,6 +18,10 @@ python3 -m unittest discover -s tests -v
 ```
 
 To retain a report, redirect stdout to a file. The report uses aggregate counts, timing, and fixed diagnostic labels instead of prompts, reasoning text, tool arguments, file paths, or source code. Review any report before publishing it. Keep raw exports outside the repository.
+
+## Controlled benchmarks
+
+Run `python3 benchmark.py list` to see the two frozen tasks. The benchmark runner prepares fresh synthetic fixtures, checks the final files independently, and compares reviewed aggregate results. See the [local benchmark guide](docs/controlled-benchmarks.md). No controlled model results have been collected yet.
 
 ## First case study: Ornith 1.5 9B MLX
 
@@ -54,7 +58,7 @@ Signals are heuristics. Re-reading can be legitimate; shell commands or unfamili
 ## Roadmap
 
 1. Session analysis and privacy-safe reports (initial prototype).
-2. Reproducible tasks, acceptance tests and comparisons.
+2. Reproducible tasks, acceptance tests and comparisons (initial two-task suite implemented).
 3. Controlled prompt and reasoning-budget experiments.
 4. Live supervision with bounded retry and progress detection.
 5. Multi-agent scheduling and visualization.
