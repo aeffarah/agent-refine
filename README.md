@@ -4,7 +4,7 @@ Local-first diagnostics and benchmarks for AI coding agents. The goal is to impr
 
 ## Status
 
-Early prototype (v0.3). Supports OpenCode JSON session analysis, controlled file-writing and HTML-editing benchmarks, independent static acceptance checks and experimental headless execution. It does not modify model weights or supervise live reasoning.
+Early prototype (v0.4). Supports OpenCode JSON session analysis, controlled file-writing and HTML-editing benchmarks, independent static acceptance checks and experimental headless execution. It does not modify model weights. Experimental server supervision observes streamed reasoning characters and interrupts sessions at configurable thresholds; backend cancellation remains unverified.
 
 ## Quick start
 
@@ -46,6 +46,8 @@ An exploratory OpenCode 1.19.6 session on an Apple M4 MacBook Air with 24 GB uni
 Each length-limited generation recorded exactly 16,384 reasoning tokens and zero non-reasoning output tokens. The final aborted generation retained 21,076 reasoning characters but reported zero tokens. Recorded token totals therefore understate actual generation. The session includes a follow-up instruction and compaction; this is a failure case study, not a controlled benchmark trial or evidence of a universal model defect.
 
 See the [aggregate baseline](benchmarks/001-ornith-baseline.json) and [evaluation protocol](docs/benchmark-protocol.md).
+
+See the [governor guide](docs/reasoning-governor.md) and [experimental bounded recovery](docs/bounded-recovery.md).
 
 ## Diagnostics
 
