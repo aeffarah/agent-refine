@@ -1,0 +1,76 @@
+{
+  "acceptance_passed": false,
+  "budget_seconds": 300,
+  "checks": {
+    "exact_kpi_values": false,
+    "fixture_preserved": true,
+    "valid_demo_structure": false,
+    "workspace_scope": true
+  },
+  "condition": "direct-staged",
+  "direct_executor": {
+    "backend_cancellation_verified": false,
+    "max_edit_attempts": 3,
+    "max_output_tokens_per_request": 1024,
+    "max_read_attempts": 2,
+    "mode": "direct-staged",
+    "policy_version": 1,
+    "recorded_tokens": {
+      "completion_including_reasoning": 751,
+      "input": 2794,
+      "reasoning": 0
+    },
+    "stop_reason": "edit_attempts_exhausted",
+    "successful_tool_calls": {
+      "read_file": 1,
+      "replace_text": 1
+    },
+    "turns": [
+      {
+        "requested_tool": "read_file",
+        "result": "executed",
+        "usage": {
+          "completion_including_reasoning": 42,
+          "input": 471,
+          "reasoning": 0
+        }
+      },
+      {
+        "requested_tool": "replace_text",
+        "result": "substring_not_unique",
+        "usage": {
+          "completion_including_reasoning": 153,
+          "input": 727,
+          "reasoning": 0
+        }
+      },
+      {
+        "requested_tool": "replace_text",
+        "result": "executed",
+        "usage": {
+          "completion_including_reasoning": 297,
+          "input": 736,
+          "reasoning": 0
+        }
+      },
+      {
+        "requested_tool": "replace_text",
+        "result": "substring_not_unique",
+        "usage": {
+          "completion_including_reasoning": 259,
+          "input": 860,
+          "reasoning": 0
+        }
+      }
+    ]
+  },
+  "elapsed_seconds": 55.621,
+  "outcome": "aborted",
+  "profile": "m4-ornith-direct-nothink-01",
+  "schema_version": 1,
+  "success": false,
+  "task": "kpi-v1",
+  "task_spec_sha256": "bdc7544f832762460c31755c68559539ab3165b67ff2f7af2db78b6b4e7a6fdf",
+  "telemetry": null,
+  "trial": 1
+}
