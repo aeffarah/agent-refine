@@ -1,0 +1,24 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "lmstudio/inkling-2-mini@q2_k_xl",
+  "small_model": "lmstudio/inkling-2-mini@q2_k_xl",
+  "provider": {
+    "lmstudio": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "LM Studio",
+      "options": {
+        "baseURL": "http://127.0.0.1:1235/v1"
+      },
+      "models": {
+        "inkling-2-mini@q2_k_xl": {
+          "name": "Inkling 2 Mini Q2_K_XL",
+          "tool_call": true,
+          "limit": {
+            "context": 24576,
+            "output": 1536
+          }
+        }
+      }
+    }
+  }
+}

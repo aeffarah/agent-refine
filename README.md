@@ -19,6 +19,10 @@ python3 -m unittest discover -s tests -v
 
 To retain a report, redirect stdout to a file. The report uses aggregate counts, timing, and fixed diagnostic labels instead of prompts, reasoning text, tool arguments, file paths, or source code. Review any report before publishing it. Keep raw exports outside the repository.
 
+### Local coding with OpenCode
+
+The project-local OpenCode configuration uses Inkling 2 Mini Q2_K_XL via the LM Studio API on port 1235. See the [local coding guide](docs/local-coding.md) for the load settings and headless workflow. The [local model decision record](docs/local-model-decision.md) explains the model choice and how Codex supervises local jobs.
+
 ## Controlled benchmarks
 
 Run `python3 benchmark.py list` to see the two frozen tasks. The benchmark runner prepares fresh synthetic fixtures, checks the final files independently, and compares reviewed aggregate results. See the [local benchmark guide](docs/controlled-benchmarks.md). Controlled aggregate results are available under `benchmarks/results/`. In three interactive KPI baseline trials, one passed within budget; three execution-first prompt trials all timed out without an edit. These small sequential samples are exploratory. Headless trials use a separate profile.
@@ -48,6 +52,8 @@ Each length-limited generation recorded exactly 16,384 reasoning tokens and zero
 See the [aggregate baseline](benchmarks/001-ornith-baseline.json) and [evaluation protocol](docs/benchmark-protocol.md).
 
 See the [governor guide](docs/reasoning-governor.md) and [experimental bounded recovery](docs/bounded-recovery.md).
+
+See the [direct staged executor](docs/direct-executor.md) for an experimental local tool loop without OpenCode. It is not yet validated against the live model.
 
 ## Diagnostics
 

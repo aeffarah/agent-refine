@@ -1,0 +1,76 @@
+{
+  "acceptance_passed": false,
+  "budget_seconds": 300,
+  "checks": {
+    "exact_kpi_values": false,
+    "fixture_preserved": false,
+    "valid_demo_structure": false,
+    "workspace_scope": true
+  },
+  "condition": "direct-lines",
+  "direct_executor": {
+    "backend_cancellation_verified": false,
+    "max_edit_attempts": 3,
+    "max_output_tokens_per_request": 1024,
+    "max_read_attempts": 2,
+    "mode": "direct-lines",
+    "policy_version": 2,
+    "recorded_tokens": {
+      "completion_including_reasoning": 1863,
+      "input": 3476,
+      "reasoning": 0
+    },
+    "stop_reason": "edit_attempts_exhausted",
+    "successful_tool_calls": {
+      "edit_lines": 3,
+      "read_file": 1
+    },
+    "turns": [
+      {
+        "requested_tool": "read_file",
+        "result": "executed",
+        "usage": {
+          "completion_including_reasoning": 39,
+          "input": 471,
+          "reasoning": 0
+        }
+      },
+      {
+        "requested_tool": "edit_lines",
+        "result": "executed",
+        "usage": {
+          "completion_including_reasoning": 778,
+          "input": 832,
+          "reasoning": 0
+        }
+      },
+      {
+        "requested_tool": "edit_lines",
+        "result": "executed",
+        "usage": {
+          "completion_including_reasoning": 658,
+          "input": 997,
+          "reasoning": 0
+        }
+      },
+      {
+        "requested_tool": "edit_lines",
+        "result": "executed",
+        "usage": {
+          "completion_including_reasoning": 388,
+          "input": 1176,
+          "reasoning": 0
+        }
+      }
+    ]
+  },
+  "elapsed_seconds": 146.059,
+  "outcome": "aborted",
+  "profile": "m4-ornith6-direct-nothink-01",
+  "schema_version": 1,
+  "success": false,
+  "task": "kpi-v1",
+  "task_spec_sha256": "bdc7544f832762460c31755c68559539ab3165b67ff2f7af2db78b6b4e7a6fdf",
+  "telemetry": null,
+  "trial": 3
+}
